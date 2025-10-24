@@ -16,7 +16,7 @@
        <img src="banner.png" alt="The Cleaning Queen's Guide eBook" class="rounded-2xl shadow-lg border-4 border-yellow-500 max-w-3xl">
     </div>
     <div id="paypal-button-container"></div>
-    <button id="fallback-buy" class="buy-btn">Buy Now — $9.99</button>
+    <button id="fallback-buy" class="buy-btn">Buy Now — $1.00</button>
   </header>
 
   <main class="content">
@@ -42,7 +42,7 @@ function initPayPal() {
     style: {{ layout: 'vertical', color: 'gold', shape: 'pill', label: 'buynow' }},
     createOrder: function(data, actions) {
       return actions.order.create({
-        purchase_units: [{ amount: { value: '9.99' } }]
+        purchase_units: [{ amount: { value: '1.00' } }]
       });
     },
     onApprove: function(data, actions) {
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
       return actions.order.create({
         purchase_units: [{
           amount: {
-            value: '9.99'
+            value: '1.00'
           }
         }]
       });
